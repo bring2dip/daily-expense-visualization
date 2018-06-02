@@ -1,0 +1,13 @@
+.DS_Store
+local
+node_modules
+npm-debug.log
+log
+.tmp
+.idea
+.swp
+public/
+config/env/local.js
+config/env/*/*.js
+log/logs.log
+log/capistrano.log
