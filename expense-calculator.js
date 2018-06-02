@@ -20,7 +20,7 @@ function isNumber(n) {
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 //3 letters short name for month
 const MONTHS_SHORT = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
-const FILE_PATH = './data/expense-2017.txt';
+const FILE_PATH = process.env.FILE_PATH || './data/sample-data.txt';
 
 const readFile = (path) => {
   const file = fs.createReadStream(path, {encoding: 'utf8'});
@@ -46,6 +46,19 @@ const rd = readline.createInterface({
 const monthly_expenses = [];
 const monthsObj = createMonthsObject();
 
+/*
+Data Format
+{
+    January: {
+      {'1': }
+    },
+    February: {
+    {'1': {'lunch': 20}},
+    {'2': {'fruits': 500}}
+  }
+}
+*/
+
 //start with January
 let currentMonth = MONTHS[0];
 let currentMonthShort = MONTHS_SHORT[0];
@@ -55,7 +68,7 @@ rd.on('line', (line) => {
 
   //first split the text by "-"
   const splitText = line.split('-');
-  //debug('line', line);
+  debug('splitText', splitText);
   //check if it is a month name
   if (splitText && splitText.length === 1 &&
     splitText[0] && MONTHS.indexOf(splitText[0].toLowerCase().capitalize()) !== -1) {
@@ -66,7 +79,7 @@ rd.on('line', (line) => {
   //day is separated by space and second character is the day in Number
 
   const daySplit = line.split(' ');
-  //debug('daySplit date', MONTHS_SHORT.indexOf(daySplit[0].toLowerCase()), daySplit[0]);
+  debug('daySplit date', MONTHS_SHORT.indexOf(daySplit[0].toLowerCase()), daySplit[0]);
   if (daySplit && daySplit.length === 2
     && MONTHS_SHORT.indexOf(daySplit[0].toLowerCase()) !== -1
     && isNumber(daySplit[1])
@@ -104,13 +117,7 @@ rd.on('line', (line) => {
   }
 });
 
-/*
-{
-    January: {
-      {'1': }
-    }
-}
-*/
+//when all lines are finished reading print to the console.
 rd.on('close', () => {
-  console.log(monthsObj.December);
+  console.log(monthsObj);
 });
