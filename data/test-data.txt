@@ -1,0 +1,59 @@
+Test Data Expense
+
+april
+//lower case number should work
+
+apr 1
+this line should be ignored
+
+apr 28
+
+number can be formatted with ,
+groceries - 20,000
+bike - 80
+lunch - 140
+
+apr 30
+number can be negative
+petrol - (300)
+lunch - 180
+
+
+May
+
+may 1
+money return - 1500
+movie - 230
+popcorn - 280
+
+may 2
+breakfast - 160
+
+may 3
+breakfast - 430
+lunch - 500
+helmet - 1400
+keyboard - 400
+bike - 20
+petrol - 200
+
+December
+dec 27
+hair treatment things - 500
+
+dec 28
+bike - 10
+lunch - 80
+
+dec 29
+lunch - 80
+
+dec 30
+this line should be ignored as well
+forget to record -
+
+
+dec 31
+lunch - 180
+
+total expense is 26670
