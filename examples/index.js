@@ -4,7 +4,7 @@ const path = require('path'),
   helpers = require(path.resolve('lib/helpers'));
 
 
-const file = path.resolve('data/sample-data.txt');
+const file = process.env.FILE_PATH || path.resolve('data/sample-data.txt');
 
 parser.fileParser(file).then((expenseObj) => {
   //console.log(expenseObj);
