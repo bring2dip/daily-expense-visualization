@@ -2,11 +2,20 @@
   "name": "daily-expense-visualization",
   "version": "0.0.1",
   "description": "Visualize your daily Expenses",
-  "repository": "https://github.com/bring2dip/daily-expense-visualization",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bring2dip/daily-expense-visualization",
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/jest/bin/jest.js ./tests"
   },
+  "keywords": [
+    "daily",
+    "expense",
+    "visualization",
+    "finance"
+  ],
   "private": false,
   "author": "Deepak Bhattarai",
   "license": "MIT",

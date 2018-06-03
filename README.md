@@ -8,21 +8,31 @@ This module will eventually include visualizations, hence the name daily expense
 
 ## Installation
 
-`npm i`  
-  
+`npm i`
 
-## Run Example:
 
-  
-`node examples/index.js`  
-  **Or with custom file path**
-  `FILE_PATH = '/path/to/file' node examples/index.js`  
+## Usage
+
+```
+ const dailyExpVis = require('daily-expense-visualization');
+
+ const filePath = '/path/to/file';
+
+ dailyExpVis.fileParser(filePath).then((expenseObj) => {
+    return dailyExpVis.aggregators.monthAggregator(expenseObj);
+ }).then((result) => {
+    console.log(result);
+ });
+
+```
   
 
 ## API
 
   
-`fileParser(filePath: string)`  
+`fileParser(filePath: string)`
+
+ **aggregators**
   
 `monthAggregator(expenseObj: Object)`  
   
@@ -31,10 +41,7 @@ This module will eventually include visualizations, hence the name daily expense
 `categoryAggregator(expenseObj: Object)`
 
 
-# For Developers
 
+# Contributing Guide
 
-## Run Tests
-
- 
-`npm run test`  
+  See [contributing guide](./CONTRIBUTING.md)
