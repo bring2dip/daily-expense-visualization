@@ -8,7 +8,7 @@ This module will eventually include visualizations, hence the name daily expense
 
 ## Installation
 
-`npm i`
+`npm i daily-expense-visualization`
 
 
 ## Usage
