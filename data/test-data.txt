@@ -18,6 +18,7 @@ number can be negative
 petrol - (300)
 lunch - 180
 
+total of april is 
 
 May
 
@@ -56,4 +57,4 @@ forget to record -
 dec 31
 lunch - 180
 
-total expense is 26670
+total expense is 26070
