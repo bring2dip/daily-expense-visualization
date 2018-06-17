@@ -25,21 +25,22 @@ This module will eventually include visualizations, hence the name daily expense
  });
 
 ```
-  
+
 
 ## API
 
-  
+
 `fileParser(filePath: string)`
 
  **aggregators**
-  
+
 `monthAggregator(expenseObj: Object)`  
-  
+
 `yearAggregator(expenseObj: Object)`  
-  
+
 `categoryAggregator(expenseObj: Object)`
 
+`categoryMonthAggregator(expenseObj: Object, month : String)`
 
 
 # Contributing Guide

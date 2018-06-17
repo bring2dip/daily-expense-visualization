@@ -46,5 +46,13 @@ const TEST_FILE_PATH = path.resolve('./data/test-data.txt');
     });
   });
 
+  test('category month aggregator', () => {
+    return parser.fileParser(TEST_FILE_PATH).then((expenseObj) => {
+      return aggregators.categoryMonthAggregator(expenseObj, 'may');
+    }).then((result) => {
+      expect(result.May.breakfast).toEqual(590);
+    });
+  });
+
 
 });
