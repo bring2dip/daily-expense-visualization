@@ -5,7 +5,7 @@ const path = require('path'),
 
 
 const file = process.env.FILE_PATH || path.resolve('data/sample-data.txt');
-
+const month = process.env.MONTH || 'january';
 parser.fileParser(file).then((expenseObj) => {
   //console.log(expenseObj);
   return Promise.all([aggregators.monthAggregator(expenseObj), aggregators.yearAggregator(expenseObj),  aggregators.categoryAggregator(expenseObj)]);
