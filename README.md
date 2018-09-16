@@ -1,6 +1,8 @@
 
 # Daily Expense Visualization 
 [![Build Status](https://travis-ci.org/bring2dip/daily-expense-visualization.svg?branch=master)](https://travis-ci.org/bring2dip/daily-expense-visualization)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1fd9c19a25d0058b8a27/maintainability)](https://codeclimate.com/github/bring2dip/daily-expense-visualization/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/1fd9c19a25d0058b8a27/test_coverage)](https://codeclimate.com/github/bring2dip/daily-expense-visualization/test_coverage)
 
 Welcome to Daily Expense Visualization. This is a Work in Progress.
 
