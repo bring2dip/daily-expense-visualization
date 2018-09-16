@@ -2,3 +2,10 @@ language: node_js
 cache:
   directories:
     - "node_modules"
+
+deploy:
+  provider: npm
+  email: bring2dip@gmail.com
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
