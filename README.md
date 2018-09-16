@@ -1,5 +1,7 @@
 
-# Daily Expense Visualization  
+# Daily Expense Visualization 
+[![Build Status](https://travis-ci.org/bring2dip/daily-expense-visualization.svg?branch=master)](https://travis-ci.org/bring2dip/daily-expense-visualization)
+
 Welcome to Daily Expense Visualization. This is a Work in Progress.
 
 It reads your expense file and performs calculations like total monthly expenses, annual expenses, categorize expenses by name.
